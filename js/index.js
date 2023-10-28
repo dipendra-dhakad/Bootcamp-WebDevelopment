@@ -3,6 +3,8 @@
 //     console.log('I have clicked on para');
 // }
 
+//const { document } = require("postcss");
+
 // myDiv.addEventListener('click' , paraStatus);
 // for(let i=1;i<=100;i++){
 //     let newElement =document.createElement('p');
@@ -14,10 +16,25 @@
 //https://github.com/dipendra-dhakad/Bootcamp-WebDevelopment.git
 //https://github.com/dipendra-dhakad/Bootcamp-WebDevelopment.git
 
-let element =document.querySelector('#wrapper');
+// let element =document.querySelector('#wrapper');
 
-element.addEventListener('click',function(event){
-    if (event.target.nodeName === 'SPAN') {
-     console.log('span pr click kia hai' + event.target.textContent);
-    }
-});  
+// element.addEventListener('click',function(event){
+//     if (event.target.nodeName === 'SPAN') {
+//      console.log('span pr click kia hai' + event.target.textContent);
+//     }
+// });  
+
+function addPara() {
+    let para =document.createElement('p')
+    para.textContent='Js is Single ';
+    document.body.appendChild(para);
+}
+
+function appendNewMessage() {
+    let para = document.createElement('p');
+    para.textContent='kya hal chal';
+    document.body.appendChild(para);
+}
+
+addPara();
+appendNewMessage(); 
